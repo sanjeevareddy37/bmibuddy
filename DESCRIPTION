@@ -1,0 +1,9 @@
+Package: bmibuddy
+Title: BMI Calculator and Classifier
+Version: 0.0.1
+Authors@R: person("Sanjeeva", "Thalla", email = "sanjeevareddy37@gmail.com", role = c("aut", "cre"))
+Description: A tiny package to calculate and classify BMI.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.3
