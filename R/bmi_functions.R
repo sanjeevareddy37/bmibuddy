@@ -9,8 +9,18 @@
 #' calc_bmi(80, 180)
 #' @export
 calc_bmi <- function(weight_kg, height_cm) {
+  # 1. Defensive Check: Inspect inputs for physiological absurdity
+  if (any(weight_kg <= 0, na.rm = TRUE)) {
+    stop("Error: weight_kg must be a positive number. You provided a zero or negative weight.")
+  }
+  
+  if (any(height_cm <= 0, na.rm = TRUE)) {
+    stop("Error: height_cm must be a positive number. You provided a zero or negative height.")
+  }
+  
+  # 2. The Calculation (Only runs if the guards let you pass)
   height_m <- height_cm / 100
-  bmi <- weight_kg / (height_m ^ 2)
+  bmi <- weight_kg / (height_m^2)
   return(bmi)
 }
 
