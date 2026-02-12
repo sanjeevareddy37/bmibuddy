@@ -5,6 +5,8 @@
 #' @param weight_kg A number. The weight in kilograms.
 #' @param height_cm A number. The height in centimeters.
 #' @return A numeric vector containing the BMI.
+#' @examples
+#' calc_bmi(80, 180)
 #' @export
 calc_bmi <- function(weight_kg, height_cm) {
   height_m <- height_cm / 100
@@ -16,6 +18,9 @@ calc_bmi <- function(weight_kg, height_cm) {
 #'
 #' @param bmi A numeric vector of BMI scores.
 #' @return A factor with levels: Underweight, Normal, Overweight, Obese.
+#' @examples
+#' classify_bmi(24.69)
+#' classify_bmi(15)
 #' @export
 classify_bmi <- function(bmi) {
   category <- cut(
@@ -26,3 +31,4 @@ classify_bmi <- function(bmi) {
   )
   return(category)
 }
+

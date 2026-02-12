@@ -15,3 +15,7 @@ A factor with levels: Underweight, Normal, Overweight, Obese.
 \description{
 Classify BMI into WHO Categories
 }
+\examples{
+classify_bmi(24.69)
+classify_bmi(15)
+}

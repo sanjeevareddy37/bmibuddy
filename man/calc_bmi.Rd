@@ -17,3 +17,6 @@ A numeric vector containing the BMI.
 \description{
 This function takes a weight and height and calculates the raw BMI score.
 }
+\examples{
+calc_bmi(80, 180)
+}
